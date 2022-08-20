@@ -87,9 +87,12 @@ public class CuentaMonetaria extends Cuenta
     
     public void descuentoManejoCuenta()
     {
+        System.out.println("Numero de transacciones: " + getNumeroTransacciones());
         if (getNumeroTransacciones()%5==0) // Si el usuario completó 5 transacciones, se hará el descuento
+        {
             super.setSaldo(super.getSaldo()-5);
-        System.out.println("Se ha debitado Q.5.00 por manejo de cuenta");
+            System.out.println("Se ha debitado Q.5.00 por manejo de cuenta");
+        }
     }
     
     //**************************************************************
